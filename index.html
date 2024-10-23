@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peña Los Andes</title>
+
+
+    <!-- Favicon para navegadores estándar -->
+    <link rel="icon" type="image/png" sizes="16x16" href="ico/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="ico/favicon-32x32.png">
+    <link rel="icon" type="image/x-icon" href="ico/favicon.ico">
+
+    <!-- Icono para dispositivos Android -->
+    <link rel="icon" sizes="192x192" href="ico/android-chrome-192x192.png">
+    <link rel="icon" sizes="512x512" href="ico/android-chrome-512x512.png">
+
+    <!-- Icono para iOS -->
+    <link rel="apple-touch-icon" href="ico/apple-touch-icon.png">
+
+
+
+
+
+
+
+
+    <link rel="icon" type="image/x-icon" href="imagenes/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/pasados.css">
+
+
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="burger" id="burger">
+        <i class="fas fa-bars"></i>
+
+    </div>
+
+    <div class="logo">
+        <a href="#"><img src="imagenes/PEÑA%20LOS%20ANDES%20LOGO%5B1%5D.png" alt="Peña Los Andes Logo"></a>
+
+
+    </div>
+
+
+
+    <!-- Menú de Navegación (oculto en móviles) -->
+    <ul class="nav-links">
+        <li><a href="#about">Nosotros</a></li>
+        <li><a href="#events_pasados">Eventos Pasados</a></li>
+        <li><a href="#events">Proximos Eventos</a></li>
+        <li><a href="#social">Contacto</a></li>
+    </ul>
+
+    <!-- Íconos de redes sociales -->
+    <div class="social-icons">
+        <a href="https://www.facebook.com/RinconcitoDeLaPeruanidad" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.youtube.com/@penalosandes3295" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.tiktok.com/@rinconcitodelaperuanidad" target="_blank"><i class="fab fa-tiktok"></i></a>
+    </div>
+
+    <!-- Botón para menú hamburguesa en pantallas pequeñas -->
+
+
+</nav>
+
+<!-- Sección de portada (Hero) -->
+<header class="hero " >
+    <div class="overlay"></div>
+    <div class="hero-content">
+        <h1 class="fade-in-title" >Ven a disfrutar de los mejores eventos </h1>
+        <p class="fade-in-subtitle" >Experiencias inolvidables con los mejores artistas </p>
+        <a href="#events" class="btn fade-in-btn">Próximos Eventos</a>
+    </div>
+</header>
+
+
+<section class="about-section section   " id="about"   >
+    <h2>Sobre Nosotros</h2>
+    <p>Organizamos los mejores eventos en Lima, ofreciendo experiencias inolvidables con artistas destacados.</p>
+
+    <div class="video-container "  data-animate="slide-right" >
+        <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/l48hVKrEX-M"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+        </iframe>
+    </div>
+
+
+</section>
+
+<!-- Sección Próximos Eventos -->
+<section id="events" class="events-section section">
+
+    <h1>Próximos Eventos</h1>
+    <div class="container events-content">
+
+
+
+        <button class="prev-btn">&#10094;</button>
+        <button class="next-btn">&#10095;</button>
+        <div class="event-slider">
+            <div class="event-card" onclick="openModal('imagenes/19%20octubre.jpg')" data-animate="slide-left" >
+                <img src="imagenes/19%20octubre.jpg" alt="Evento 2">
+                <div class="event-info">
+                    <h3>FestiRockPeru </h3>
+                    <p>Fecha: 19 de octubre, 2024</p>
+                </div>
+            </div>
+
+            <div id="imageModal" class="modal" onclick="closeModal()">
+                <span class="close" onclick="closeModal()">&times</span>
+                <img class="modal-content" id="fullImage">
+            </div>
+            <div class="event-card" onclick="openModal('imagenes/25%20octubre.jpg')" >
+                <img src="imagenes/25%20octubre.jpg" alt="Evento 2">
+                <div class="event-info">
+                    <h3>90's fest </h3>
+                    <p>Fecha: 25 de octubre, 2024</p>
+                </div>
+            </div>
+            <div class="event-card " onclick="openModal('imagenes/31%20octubre.jpg')" >
+                <img src="imagenes/31%20octubre.jpg" alt="Evento 3">
+                <div class="event-info">
+                    <h3>Festival  </h3>
+                    <p>Fecha: 31 de octubre, 2024</p>
+                </div>
+            </div>
+            <div class="event-card" onclick="openModal('imagenes/1%20de%20noviembre.jpg')">
+                <img src="imagenes/1%20de%20noviembre.jpg" alt="Evento 4">
+                <div class="event-info">
+                    <h3>Festival de tributos</h3>
+                    <p>Fecha: 01 de noviembre, 2024</p>
+                </div>
+            </div>
+
+            <div class="event-card" onclick="openModal('imagenes/02%20noviembre.jpg')">
+                <img src="imagenes/02%20noviembre.jpg" alt="Evento 4">
+                <div class="event-info">
+                    <h3>Amen </h3>
+                    <p>Fecha:02 de noviembre, 2024</p>
+                </div>
+            </div>
+
+            <div class="event-card" onclick="openModal('imagenes/22%20noviembre.jpg')" >
+                <img src="imagenes/22%20noviembre.jpg" alt="Evento 4">
+                <div class="event-info">
+                    <h3>No Recomendable</h3>
+                    <p>Fecha: 22 de noviembre, 2024</p>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="event-card" onclick="openModal('imagenes/29%20noviembre.jpg')">
+                <img src="imagenes/29%20noviembre.jpg" alt="Evento 4">
+                <div class="event-info">
+                    <h3>Chabelos</h3>
+                    <p>Fecha: 29 de noviembre, 2024</p>
+                </div>
+            <!-- Agrega más tarjetas si es necesario -->
+        </div>
+    </div>
+</section>
+
+
+<section id="events_pasados" class="events-section section">
+
+    <h1>Eventos pasados</h1>
+    <div class="container events-content">
+
+
+
+
+        <div class="event-slider">
+            <div class="event-card">
+                <a href="Eventos%20pasados.html" style="text-decoration: none; color: inherit;">
+                <img src="imagenes/14%20setiembre.jpg" alt="Evento 1">
+                <div class="event-info">
+                    <h3>Festival tropical  </h3>
+                    <p>Fecha: 14 de septiembre, 2024</p>
+                </div>
+                </a>
+            </div>
+
+        </div>
+
+</section>
+
+
+
+<!-- Sección Contacto / Redes Sociales -->
+<section class="contact-section section " id="social">
+    <h2>Contacto</h2>
+    <p>Puedes visitarnos o escribirnos para más información.</p>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <div class="contact-item">
+
+                    <i class="fas fa-phone-alt"></i>
+                <span>+51 937 797 441</span>
+
+                </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <span>oscarzan1964@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Av Industrial 3655, Independencia 15311</span>
+            </div>
+        </div>
+
+        <!-- Mapa de Google Maps -->
+        <div class="map-container">
+            <iframe
+
+
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3902.7369505080665!2d-77.06129451279408!3d-11.992694804478353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105ce5647ed0f69%3A0x6ca84285b8fff1a6!2sPE%C3%91A%20LOS%20ANDES!5e0!3m2!1ses-419!2spe!4v1728926231343!5m2!1ses-419!2spe"
+                    height="450"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Pie de página -->
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2024 Peña Los Andes. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<div class="whatsapp-container">
+    <div class="whatsapp-message">
+        <p>¿Necesitas ayuda? <br><strong>Escríbenos</strong></p>
+    </div>
+    <a href="https://wa.me/51937797441" target="_blank" class="whatsapp-button">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</div>
+
+<script src="js/script.js"></script>
+<script src="js/script2.js"></script>
+</body>
+</html>

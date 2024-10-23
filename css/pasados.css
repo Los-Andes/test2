@@ -1,0 +1,261 @@
+.back-button {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.back-button button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button button:hover {
+    background-color: #c0392b;
+}
+
+/* Estilo del Header */
+.event-header {
+    position: relative;
+    background: linear-gradient(135deg, #943e31, #60105f);
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 100vh; /* Ocupa toda la pantalla */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.event-header h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+/* Superposición para atenuar las imágenes */
+.event-header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Oscurece ligeramente */
+    z-index: 1;
+}
+
+/* Collage de fotos */
+.photo-collage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    z-index: 2;
+    position: relative;
+}
+
+.photo-collage img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.photo-collage img:hover {
+    transform: scale(1.1); /* Aumenta ligeramente al pasar el ratón */
+}
+
+/* Responsividad para móviles */
+@media screen and (max-width: 768px) {
+    .photo-collage img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .event-header h1 {
+        font-size: 36px;
+    }
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-left {
+    opacity: 0;
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.slide-right {
+    opacity: 0;
+    animation: slideInRight 1s ease-out forwards;
+}
+
+
+/* Mensaje emergente */
+.whatsapp-message {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Contenedor principal */
+.whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+}
+/* Mensaje emergente */
+.whatsapp-message {
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none; /* Oculto por defecto */
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.whatsapp-container:hover .whatsapp-message {
+    display: block; /* Muestra el mensaje cuando pasas el ratón */
+}
+/* Icono de botón de WhatsApp */
+.whatsapp-button {
+    background-color: #25D366;
+    color: white;
+    font-size: 30px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Efecto al pasar el ratón por el botón */
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
+
+/* Ajuste para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .whatsapp-message {
+        display: none; /* Ocultar el mensaje en dispositivos pequeños */
+    }
+
+    .whatsapp-button {
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+    }
+}
+
+/* Animaciones generales */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Título */
+.fade-in-title {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 0.5s; /* Comienza medio segundo después de cargar */
+}
+
+/* Subtítulo */
+.fade-in-subtitle {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 1.5s; /* Aparece después del título */
+}
+
+/* Botón */
+.fade-in-btn {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 2.5s; /* Aparece después del subtítulo */
+}
+
+.navbar .logo1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+body.scrolled .navbar .logo1 img {
+    width: 100px; /* Reducción del logo al hacer scroll */
+    transition: width 0.3s ease-in-out;
+}
+.navbar .logo1 img {
+    width: 120px; /* Tamaño del logo */
+    height: auto;
+    animation: vibrate-zoom 1s infinite; /* Animación continua */
+    transition: transform 0.3s ease-in-out;
+}
